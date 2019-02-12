@@ -141,7 +141,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 106227358}
   m_LocalRotation: {x: -0, y: 0.30120426, z: -0, w: 0.95355964}
-  m_LocalPosition: {x: -891.12964, y: 20.3, z: -377.47845}
+  m_LocalPosition: {x: 0, y: -17, z: -3}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 1977123329}
@@ -270,7 +270,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.48872185
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -344,7 +344,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 237266433}
   m_LocalRotation: {x: -0, y: 0.30120426, z: -0, w: 0.95355964}
-  m_LocalPosition: {x: -810.2, y: 17.9, z: -280.1}
+  m_LocalPosition: {x: 80.92963, y: -19.399994, z: 94.37845}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 1977123329}
@@ -463,7 +463,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.48872185
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -550,7 +550,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 365617626}
   m_LocalRotation: {x: -0, y: 0.30120426, z: -0, w: 0.95355964}
-  m_LocalPosition: {x: -849.9, y: 19.1, z: -325}
+  m_LocalPosition: {x: 41.229614, y: -18.199997, z: 49.478455}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1977123329}
@@ -669,7 +669,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.48872185
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -756,6 +756,7 @@ Transform:
   m_Children:
   - {fileID: 457546569}
   - {fileID: 780847357}
+  - {fileID: 967458582}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -804,8 +805,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 1
   m_distance: 50
-  m_planets: []
-  m_offset_y: 50
+  m_planets:
+  - {fileID: 106227358}
+  - {fileID: 1940519208}
+  - {fileID: 799772588}
+  - {fileID: 365617626}
+  - {fileID: 869043140}
+  - {fileID: 237266433}
 --- !u!124 &457546567
 Behaviour:
   m_ObjectHideFlags: 0
@@ -831,8 +837,8 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
-  orthographic: 1
+  field of view: 52.2
+  orthographic: 0
   orthographic size: 29.39
   m_Depth: 0
   m_CullingMask:
@@ -1015,8 +1021,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 780847354}
-  m_LocalRotation: {x: 0.380379, y: -0.101237096, z: 0.041933775, w: 0.9183161}
-  m_LocalPosition: {x: -780, y: 560, z: -904}
+  m_LocalRotation: {x: -0.33254167, y: 0.45818847, z: -0.18993674, w: -0.8021243}
+  m_LocalPosition: {x: 336.40067, y: 380.43402, z: -210.45721}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 383477991}
@@ -1050,7 +1056,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 799772588}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -864, y: 19.4, z: -342.3}
+  m_LocalPosition: {x: 27.129639, y: -17.899994, z: 32.178467}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1977123329}
@@ -1182,7 +1188,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.48872185
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1256,7 +1262,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 869043140}
   m_LocalRotation: {x: -0, y: 0.30120426, z: -0, w: 0.95355964}
-  m_LocalPosition: {x: -828, y: 17.9, z: -302.1}
+  m_LocalPosition: {x: 63.12964, y: -19.399994, z: 72.37845}
   m_LocalScale: {x: 9, y: 9, z: 9}
   m_Children: []
   m_Father: {fileID: 1977123329}
@@ -1375,7 +1381,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.48872185
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1434,6 +1440,87 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   reverseRotate: 0
+--- !u!1 &967458581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 967458582}
+  - component: {fileID: 967458585}
+  - component: {fileID: 967458584}
+  - component: {fileID: 967458583}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &967458582
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967458581}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 383477991}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &967458583
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967458581}
+  m_Enabled: 1
+--- !u!124 &967458584
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967458581}
+  m_Enabled: 1
+--- !u!20 &967458585
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967458581}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &1294345501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,7 +1580,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1294345501}
   m_LocalRotation: {x: -0.34736282, y: 0.059300758, z: -0.022016287, w: -0.9355949}
-  m_LocalPosition: {x: -773, y: 571, z: -1017}
+  m_LocalPosition: {x: 118.12964, y: 741.7, z: -642.52155}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1527,7 +1614,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1940519208}
   m_LocalRotation: {x: -0, y: 0.30120426, z: -0, w: 0.95355964}
-  m_LocalPosition: {x: -875.1, y: 19.2, z: -355.9}
+  m_LocalPosition: {x: 16.029663, y: -18.100006, z: 18.57846}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1977123329}
@@ -1659,7 +1746,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.48872185
         inSlope: 0
         outSlope: 0
         tangentMode: 0

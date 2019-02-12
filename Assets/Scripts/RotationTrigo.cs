@@ -14,7 +14,7 @@ public class RotationTrigo : MonoBehaviour
     protected float m_distance;
 
     private float m_time_;
-    
+
     // Use this for initialization
     void Start()
     {

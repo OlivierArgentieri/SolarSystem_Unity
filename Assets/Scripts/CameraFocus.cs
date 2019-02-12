@@ -14,40 +14,32 @@ public class CameraFocus : MonoBehaviour
     [SerializeField]
     private List<GameObject> m_planets;
 
-    [SerializeField]
-    private float m_offset_y;
-
-    private float m_time_;
     private int m_current_planet_index_;
     private GameObject m_originGameObject;
+    private Vector2 m_input_;
+
     // Use this for initialization
     void Start()
     {
         m_current_planet_index_ = 0;
         m_originGameObject = m_planets[m_current_planet_index_];
 
-        m_distance += m_originGameObject.transform.localScale.x;
-        m_time_ = 0;
+       // m_distance += m_originGameObject.transform.localScale.x;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float x = m_originGameObject.transform.position.x + Mathf.Cos(m_time_) * m_distance;
-        float y = m_originGameObject.transform.position.y + m_offset_y;
-        float z = m_originGameObject.transform.position.z + Mathf.Sin(m_time_) * m_distance;
+        m_input_ += new Vector2(Input.GetAxis("Mouse Y") * m_speed, Input.GetAxis("Mouse X") * m_speed);
+        transform.localRotation = Quaternion.Euler(m_input_.x, m_input_.y, 0);
+        transform.localPosition = m_planets[m_current_planet_index_].transform.position - (transform.localRotation * Vector3.forward * m_distance);
 
-        m_time_ += Time.deltaTime * m_speed;
-        GetComponent<Transform>().position = new Vector3(x, y, z);
-
-        transform.LookAt(m_planets[m_current_planet_index_].transform);
+        //transform.LookAt(m_planets[m_current_planet_index_].transform);
         if (Input.GetKeyDown(KeyCode.Mouse0))
             PreviousPlanet();
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
             NextPlanet();
-
-
     }
 
     void NextPlanet()

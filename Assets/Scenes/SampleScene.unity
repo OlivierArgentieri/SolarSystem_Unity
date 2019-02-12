@@ -784,8 +784,6 @@ GameObject:
   - component: {fileID: 457546568}
   - component: {fileID: 457546567}
   - component: {fileID: 457546566}
-  - component: {fileID: 457546570}
-  - component: {fileID: 457546571}
   m_Layer: 0
   m_Name: FocusCamera
   m_TagString: Untagged
@@ -793,13 +791,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &457546566
-AudioListener:
+--- !u!114 &457546566
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 457546565}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a5157f25d2b604ba619f7bdd48a7c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_speed: 1
+  m_distance: 50
+  m_planets: []
+  m_offset_y: 50
 --- !u!124 &457546567
 Behaviour:
   m_ObjectHideFlags: 0
@@ -849,39 +855,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 457546565}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.30070576, y: 0, z: 0, w: 0.953717}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 383477991}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &457546570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 457546565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5051828a3b0a5a64e83959ced090b276, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_originGameObject: {fileID: 106227358}
-  m_speed: 1
-  m_distance: 50
---- !u!114 &457546571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 457546565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6a5157f25d2b604ba619f7bdd48a7c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_target: {fileID: 106227358}
+  m_LocalEulerAnglesHint: {x: 35, y: 0, z: 0}
 --- !u!1 &692861713
 GameObject:
   m_ObjectHideFlags: 0

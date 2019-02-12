@@ -33,4 +33,6 @@ public class RotationTrigo : MonoBehaviour
         m_time_ += Time.deltaTime * m_speed;
         GetComponent<Transform>().position = new Vector3(x, y, z);
     }
+
+
 }

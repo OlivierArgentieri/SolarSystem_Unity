@@ -5,33 +5,32 @@ using UnityEngine;
 public class RotationTrigo : MonoBehaviour
 {
     [SerializeField]
-    protected GameObject originGameObject;
+    protected GameObject m_originGameObject;
 
     [SerializeField]
-    protected float vitesse;
+    protected float m_speed;
 
     [SerializeField]
-    protected float distance;
+    protected float m_distance;
 
-    private float time;
-
+    private float m_time_;
 
     // Use this for initialization
     void Start()
     {
-        distance += originGameObject.transform.localScale.x;
-        
+        m_distance += m_originGameObject.transform.localScale.x;
+        m_time_ = 0;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        time = Time.time;
-        float x = originGameObject.transform.position.x + Mathf.Cos(time * vitesse) * distance;
-        float y = originGameObject.transform.position.y + 0;
-        float z = originGameObject.transform.position.z + Mathf.Sin(time * vitesse) * distance;
-
+        float x = m_originGameObject.transform.position.x + Mathf.Cos(m_time_) * m_distance;
+        float y = m_originGameObject.transform.position.y + 0;
+        float z = m_originGameObject.transform.position.z + Mathf.Sin(m_time_) * m_distance;
+    
+        m_time_ += Time.deltaTime * m_speed;
         GetComponent<Transform>().position = new Vector3(x, y, z);
     }
 }

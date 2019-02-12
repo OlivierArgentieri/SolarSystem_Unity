@@ -14,7 +14,7 @@ public class RotationTrigo : MonoBehaviour
     protected float m_distance;
 
     private float m_time_;
-
+    
     // Use this for initialization
     void Start()
     {
@@ -27,7 +27,7 @@ public class RotationTrigo : MonoBehaviour
     void Update()
     {
         float x = m_originGameObject.transform.position.x + Mathf.Cos(m_time_) * m_distance;
-        float y = m_originGameObject.transform.position.y + 0;
+        float y = m_originGameObject.transform.position.y;
         float z = m_originGameObject.transform.position.z + Mathf.Sin(m_time_) * m_distance;
     
         m_time_ += Time.deltaTime * m_speed;

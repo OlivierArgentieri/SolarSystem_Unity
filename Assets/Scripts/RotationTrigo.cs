@@ -26,8 +26,8 @@ public class RotationTrigo : MonoBehaviour
         float x = m_originGameObject.transform.position.x + Mathf.Cos(m_time_) * m_distance;
         float y = transform.position.y;
         float z = m_originGameObject.transform.position.z + Mathf.Sin(m_time_) * m_distance;
-    
         transform.position = new Vector3(x, y, z);
+
         m_time_ += Time.deltaTime * m_speed;
     }
 }

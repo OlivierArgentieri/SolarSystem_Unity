@@ -24,7 +24,7 @@ public class CameraFocus : MonoBehaviour
         m_current_planet_index_ = 0;
         m_originGameObject = m_planets[m_current_planet_index_];
 
-       // m_distance += m_originGameObject.transform.localScale.x;
+        // m_distance += m_originGameObject.transform.localScale.x;
     }
 
     // Update is called once per frame
@@ -35,6 +35,14 @@ public class CameraFocus : MonoBehaviour
         transform.localPosition = m_planets[m_current_planet_index_].transform.position - (transform.localRotation * Vector3.forward * m_distance);
 
         //transform.LookAt(m_planets[m_current_planet_index_].transform);
+        /*
+
+        float x = m_originGameObject.transform.position.x + Mathf.Cos(m_input_.x) * m_distance;
+        float y = Mathf.Sqrt(Mathf.Pow(10, 2), Mathf.Pow(m_input_.x, 2), Mathf.Pow(m_input_.y, 2)) + m_originGameObject.transform.position.y + Mathf.Sin(m_input_.y) * m_distance;
+        float z = m_originGameObject.transform.position.z;
+
+        GetComponent<Transform>().position = new Vector3(x, y, z);
+        */
         if (Input.GetKeyDown(KeyCode.Mouse0))
             PreviousPlanet();
 

@@ -16,33 +16,26 @@ public class CameraFocus : MonoBehaviour
 
     private int m_current_planet_index_;
     private GameObject m_originGameObject;
-    private Vector2 m_input_;
 
+    float yInput;
+    float xInput;
     // Use this for initialization
     void Start()
     {
         m_current_planet_index_ = 0;
         m_originGameObject = m_planets[m_current_planet_index_];
-
+        m_distance = (m_originGameObject.transform.position - transform.position).magnitude;
         // m_distance += m_originGameObject.transform.localScale.x;
     }
 
     // Update is called once per frame
     void Update()
     {
-        m_input_ += new Vector2(Input.GetAxis("Mouse Y") * m_speed, Input.GetAxis("Mouse X") * m_speed);
-        transform.localRotation = Quaternion.Euler(m_input_.x, m_input_.y, 0);
+        yInput = Input.GetAxis("Mouse Y");
+        xInput = Input.GetAxis("Mouse X");
+        transform.localRotation *= Quaternion.Euler(yInput, xInput, 0);
         transform.localPosition = m_planets[m_current_planet_index_].transform.position - (transform.localRotation * Vector3.forward * m_distance);
-
-        //transform.LookAt(m_planets[m_current_planet_index_].transform);
-        /*
-
-        float x = m_originGameObject.transform.position.x + Mathf.Cos(m_input_.x) * m_distance;
-        float y = Mathf.Sqrt(Mathf.Pow(10, 2), Mathf.Pow(m_input_.x, 2), Mathf.Pow(m_input_.y, 2)) + m_originGameObject.transform.position.y + Mathf.Sin(m_input_.y) * m_distance;
-        float z = m_originGameObject.transform.position.z;
-
-        GetComponent<Transform>().position = new Vector3(x, y, z);
-        */
+        
         if (Input.GetKeyDown(KeyCode.Mouse0))
             PreviousPlanet();
 

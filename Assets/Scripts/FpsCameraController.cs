@@ -14,6 +14,7 @@ public class FpsCameraController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        
         float yr = Input.GetAxis("Mouse X");
         float xr = Input.GetAxis("Mouse Y");
         float x = Input.GetAxis("Horizontal");
@@ -23,7 +24,7 @@ public class FpsCameraController : MonoBehaviour {
         xr *= m_speed * Time.deltaTime *-1;
         x *= m_speed * Time.deltaTime;
         z *= m_speed * Time.deltaTime;
-        transform.Rotate(new Vector3(xr, yr));
+        transform.eulerAngles += new Vector3(xr, yr);
         transform.Translate(new Vector3(x, 0, z));
     }
 }

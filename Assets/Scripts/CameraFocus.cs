@@ -31,9 +31,10 @@ public class CameraFocus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        yInput = Input.GetAxis("Mouse Y");
-        xInput = Input.GetAxis("Mouse X");
-        transform.localRotation *= Quaternion.Euler(yInput, xInput, 0);
+        yInput += Input.GetAxis("Mouse Y");
+        xInput += Input.GetAxis("Mouse X");
+       // transform.eulerAngles += new Vector3(yInput, xInput);
+        transform.localRotation = Quaternion.Euler(yInput, xInput, 0);
         transform.localPosition = m_planets[m_current_planet_index_].transform.position - (transform.localRotation * Vector3.forward * m_distance);
         
         if (Input.GetKeyDown(KeyCode.Mouse0))

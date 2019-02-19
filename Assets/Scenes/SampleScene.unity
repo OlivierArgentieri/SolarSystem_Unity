@@ -851,7 +851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 1
-  m_distance: 50
+  m_distance: 100
   m_planets:
   - {fileID: 106227358}
   - {fileID: 1940519208}

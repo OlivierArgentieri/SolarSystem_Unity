@@ -804,7 +804,7 @@ Transform:
   - {fileID: 780847357}
   - {fileID: 967458582}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &383477992
 MonoBehaviour:
@@ -1000,7 +1000,7 @@ Transform:
   m_LocalScale: {x: 1000, y: 1000, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &780847354
 GameObject:
@@ -2196,5 +2196,92 @@ Transform:
   - {fileID: 237266434}
   - {fileID: 815453117}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1983406945
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 43.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -15.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 55.288
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d0c0d32e5f66dfc4697c6c0266baa0be, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1 &1983406946 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 9b31316d9b29f3849bb1842343c0ffd9, type: 3}
+  m_PrefabInternal: {fileID: 1983406945}
+--- !u!114 &1983406947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1983406946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5051828a3b0a5a64e83959ced090b276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_originGameObject: {fileID: 365617626}
+  m_speed: 0.1

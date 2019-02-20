@@ -54,11 +54,9 @@ public class CameraFocus : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.localRotation = Quaternion.Euler(m_input_.y, m_input_.x, 0);
-        transform.localPosition = m_planets[m_current_planet_index_].transform.position - (transform.localRotation * Vector3.forward * m_distance);
-
-
         WheelZoom();
+        transform.localRotation = Quaternion.Euler(m_input_.y, m_input_.x, 0);
+        transform.localPosition = m_planets[m_current_planet_index_].transform.position - (transform.localRotation * Vector3.forward * m_distance * w);
     }
 
     void NextPlanet()
@@ -89,7 +87,6 @@ public class CameraFocus : MonoBehaviour
         if (m_min_zoom > 0 && m_max_zoom > 0 && m_sensivity_zoom > 0)
         {
             w = Mathf.Clamp(w, m_min_zoom, m_max_zoom);
-            m_camera_.fieldOfView = w * m_sensivity_zoom;
         }
     }   
 }

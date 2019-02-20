@@ -16,9 +16,17 @@ public class CameraFocus : MonoBehaviour
 
     private int m_current_planet_index_;
     private GameObject m_originGameObject;
+    
+    private Vector2 m_input_;
+    [SerializeField] private float m_min_zoom;
+    [SerializeField] private float m_max_zoom;
+    [SerializeField] private float m_sensivity_zoom;
 
-    float yInput;
-    float xInput;
+
+
+    private float w;
+    private Camera m_camera_;
+
     // Use this for initialization
     void Start()
     {
@@ -26,22 +34,31 @@ public class CameraFocus : MonoBehaviour
         m_originGameObject = m_planets[m_current_planet_index_];
         m_distance = (m_originGameObject.transform.position - transform.position).magnitude;
         // m_distance += m_originGameObject.transform.localScale.x;
+        m_camera_ = GetComponent<Camera>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        yInput += Input.GetAxis("Mouse Y");
-        xInput += Input.GetAxis("Mouse X");
+        w += Input.GetAxis("Mouse ScrollWheel") * -1;
+        m_input_ += new Vector2(Input.GetAxis("Mouse X") * m_speed, Input.GetAxis("Mouse Y") * m_speed);
        // transform.eulerAngles += new Vector3(yInput, xInput);
-        transform.localRotation = Quaternion.Euler(yInput, xInput, 0);
-        transform.localPosition = m_planets[m_current_planet_index_].transform.position - (transform.localRotation * Vector3.forward * m_distance);
         
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
             PreviousPlanet();
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
             NextPlanet();
+    }
+
+    private void LateUpdate()
+    {
+        transform.localRotation = Quaternion.Euler(m_input_.y, m_input_.x, 0);
+        transform.localPosition = m_planets[m_current_planet_index_].transform.position - (transform.localRotation * Vector3.forward * m_distance);
+
+
+        WheelZoom();
     }
 
     void NextPlanet()
@@ -66,4 +83,13 @@ public class CameraFocus : MonoBehaviour
             m_current_planet_index_ = m_planets.Count - 1;
         m_originGameObject = m_planets[m_current_planet_index_];
     }
+
+    void WheelZoom()
+    {
+        if (m_min_zoom > 0 && m_max_zoom > 0 && m_sensivity_zoom > 0)
+        {
+            w = Mathf.Clamp(w, m_min_zoom, m_max_zoom);
+            m_camera_.fieldOfView = w * m_sensivity_zoom;
+        }
+    }   
 }

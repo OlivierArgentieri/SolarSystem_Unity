@@ -2,29 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FpsCameraController : MonoBehaviour {
+public class FpsCameraController : MonoBehaviour
+{
 
     [SerializeField]
     private float m_speed = 10;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+
+    private Vector2 m_mouse_position_;
+    private Vector2 m_input_keyboard_;
+    // Use this for initialization
+    void Start()
+    {
+
+    }
 
     // Update is called once per frame
-    void Update() {
-        
-        float yr = Input.GetAxis("Mouse X");
-        float xr = Input.GetAxis("Mouse Y");
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+    void Update()
+    {
+        m_mouse_position_ = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+        m_input_keyboard_ = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
-        yr *= m_speed * Time.deltaTime;
-        xr *= m_speed * Time.deltaTime *-1;
-        x *= m_speed * Time.deltaTime;
-        z *= m_speed * Time.deltaTime;
-        transform.eulerAngles += new Vector3(xr, yr);
-        transform.Translate(new Vector3(x, 0, z));
+        m_mouse_position_.y *= m_speed * Time.deltaTime;
+        m_mouse_position_.x *= m_speed * Time.deltaTime * -1;
+        m_input_keyboard_.x *= m_speed * Time.deltaTime;
+        m_input_keyboard_.y *= m_speed * Time.deltaTime;
+
+
+        
+    }
+
+    private void LateUpdate()
+    {
+        transform.rotation = Quaternion.AngleAxis(m_mouse_position_.y*-1, transform.right) * transform.rotation;
+        transform.rotation = Quaternion.AngleAxis(m_mouse_position_.x*-1, Vector3.up) * transform.rotation;
+        // transform.eulerAngles += new Vector3(xr, yr);
+        transform.Translate(new Vector3(m_input_keyboard_.x, 0, m_input_keyboard_.y));
     }
 }

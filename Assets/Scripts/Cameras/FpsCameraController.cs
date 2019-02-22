@@ -22,15 +22,15 @@ public class FpsCameraController : MonoBehaviour
         m_input_keyboard_ = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
         m_mouse_position_.y *= m_speed * Time.deltaTime;
-        m_mouse_position_.x *= m_speed * Time.deltaTime * -1;
+        m_mouse_position_.x *= m_speed * Time.deltaTime;
         m_input_keyboard_.x *= m_speed * Time.deltaTime;
         m_input_keyboard_.y *= m_speed * Time.deltaTime;
     }
 
     private void LateUpdate()
     {
-        transform.rotation = Quaternion.AngleAxis(m_mouse_position_.y*-1, transform.right) * transform.rotation;
-        transform.rotation = Quaternion.AngleAxis(m_mouse_position_.x*-1, Vector3.up) * transform.rotation;
+        transform.rotation = Quaternion.AngleAxis(-m_mouse_position_.y, transform.right) * transform.rotation;
+        transform.rotation = Quaternion.AngleAxis(m_mouse_position_.x, Vector3.up) * transform.rotation;
         transform.Translate(new Vector3(m_input_keyboard_.x, 0, m_input_keyboard_.y));
     }
 }

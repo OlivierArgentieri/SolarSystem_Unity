@@ -6,7 +6,13 @@ public class Menu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.UnloadScene("MenuScene");
+        SceneManager.LoadScene("MainScene");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
     // Use this for initialization
     void Start()

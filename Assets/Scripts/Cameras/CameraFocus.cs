@@ -21,8 +21,7 @@ public class CameraFocus : MonoBehaviour
     [SerializeField] private float m_min_zoom;
     [SerializeField] private float m_max_zoom;
     [SerializeField] private float m_sensivity_zoom;
-
-
+    
 
     private float w;
     private Camera m_camera_;
@@ -41,9 +40,7 @@ public class CameraFocus : MonoBehaviour
     void Update()
     {
         w += Input.GetAxis("Mouse ScrollWheel") * -1;
-        m_input_ += new Vector2(Input.GetAxis("Mouse X") * m_speed, Input.GetAxis("Mouse Y") * m_speed);
-       // transform.eulerAngles += new Vector3(yInput, xInput);
-        
+        m_input_ += new Vector2(Input.GetAxis("Mouse X") * m_speed * Time.deltaTime, Input.GetAxis("Mouse Y") * m_speed * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
             PreviousPlanet();

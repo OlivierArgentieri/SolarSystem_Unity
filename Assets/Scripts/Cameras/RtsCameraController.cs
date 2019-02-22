@@ -24,13 +24,12 @@ public class RtsCameraController : MonoBehaviour
         x = Input.GetAxis("Horizontal");
         z = Input.GetAxis("Vertical");
 
-        w += Input.GetAxis("Mouse ScrollWheel") * -1;
+        w += -Input.GetAxis("Mouse ScrollWheel");
 
         x *= m_speed * Time.deltaTime;
         z *= m_speed * Time.deltaTime;
 
         transform.Translate(new Vector3(x, z, 0));
-        
     }
     private void LateUpdate()
     {

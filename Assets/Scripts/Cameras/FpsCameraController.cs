@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class FpsCameraController : MonoBehaviour
 {
-
     [SerializeField]
     private float m_speed = 10;
-
 
     private Vector2 m_mouse_position_;
     private Vector2 m_input_keyboard_;
@@ -27,16 +25,12 @@ public class FpsCameraController : MonoBehaviour
         m_mouse_position_.x *= m_speed * Time.deltaTime * -1;
         m_input_keyboard_.x *= m_speed * Time.deltaTime;
         m_input_keyboard_.y *= m_speed * Time.deltaTime;
-
-
-        
     }
 
     private void LateUpdate()
     {
         transform.rotation = Quaternion.AngleAxis(m_mouse_position_.y*-1, transform.right) * transform.rotation;
         transform.rotation = Quaternion.AngleAxis(m_mouse_position_.x*-1, Vector3.up) * transform.rotation;
-        // transform.eulerAngles += new Vector3(xr, yr);
         transform.Translate(new Vector3(m_input_keyboard_.x, 0, m_input_keyboard_.y));
     }
 }

@@ -852,7 +852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a5157f25d2b604ba619f7bdd48a7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 1
+  m_speed: 100
   m_distance: 100
   m_planets:
   - {fileID: 106227358}

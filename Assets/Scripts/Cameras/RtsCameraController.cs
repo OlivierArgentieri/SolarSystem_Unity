@@ -41,7 +41,7 @@ public class RtsCameraController : MonoBehaviour
         if (m_min_zoom >0&& m_max_zoom >0 && m_sensivity_zoom >0)
         {
             w = Mathf.Clamp(w, m_min_zoom, m_max_zoom);
-            m_camera_.fieldOfView = w * m_sensivity_zoom;
+            //m_camera_.fieldOfView = w * m_sensivity_zoom;
         }
     }
 }

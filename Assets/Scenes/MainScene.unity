@@ -632,7 +632,6 @@ GameObject:
   - component: {fileID: 365617628}
   - component: {fileID: 365617635}
   - component: {fileID: 365617632}
-  - component: {fileID: 365617633}
   - component: {fileID: 365617634}
   m_Layer: 0
   m_Name: Earth
@@ -814,19 +813,6 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
---- !u!114 &365617633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 365617626}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c113f5ae274f304299a51bf6a64f278, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  reverseRotate: 0
 --- !u!54 &365617634
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3126,7 +3112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  reverseRotate: 1
+  reverseRotate: 0
 --- !u!1 &1573923607
 GameObject:
   m_ObjectHideFlags: 0

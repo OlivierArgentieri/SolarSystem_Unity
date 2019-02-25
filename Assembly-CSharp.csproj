@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Cameras\CameraFocus.cs" />
     <Compile Include="Assets\Scripts\Cameras\FpsCameraController.cs" />
     <Compile Include="Assets\Scripts\Cameras\RtsCameraController.cs" />
+    <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\Menu\Menu.cs" />
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\RotationTrigo.cs" />

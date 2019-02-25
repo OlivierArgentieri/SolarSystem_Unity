@@ -271,7 +271,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.48872185
+        value: 0.124448776
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -479,7 +479,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.48872185
+        value: 0.124448776
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -767,7 +767,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.48872185
+        value: 0.124448776
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1066,7 +1066,7 @@ MonoBehaviour:
   - {fileID: 1077534435}
   - {fileID: 1974863878}
   m_min_zoom: 1
-  m_max_zoom: 100
+  m_max_zoom: 10
   m_sensivity_zoom: 10
 --- !u!124 &457546567
 Behaviour:
@@ -1275,7 +1275,7 @@ GameObject:
   - component: {fileID: 780847355}
   - component: {fileID: 780847358}
   m_Layer: 0
-  m_Name: MainCamera
+  m_Name: RtsCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1349,7 +1349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 100
-  m_max_zoom: 10
+  m_max_zoom: 60
   m_min_zoom: 1
   m_sensivity_zoom: 10
 --- !u!1 &799772588
@@ -1399,7 +1399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_originGameObject: {fileID: 106227358}
-  m_speed: 3
+  m_speed: 2.1
 --- !u!135 &799772591
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1512,7 +1512,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.48872185
+        value: 0.124448776
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1920,7 +1920,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.48872185
+        value: 0.124448776
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -2115,7 +2115,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.48872185
+        value: 0.124448776
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -2581,7 +2581,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 10
+  m_Time: 20
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 1
@@ -2590,7 +2590,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.48872185
+        value: 0.124448776
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -3111,7 +3111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c113f5ae274f304299a51bf6a64f278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   reverseRotate: 0
 --- !u!1 &1573923607
 GameObject:
@@ -3480,7 +3480,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.48872185
+        value: 0.124448776
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -3649,7 +3649,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.48872185
+        value: 0.124448776
         inSlope: 0
         outSlope: 0
         tangentMode: 0

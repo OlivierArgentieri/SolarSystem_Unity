@@ -12,25 +12,25 @@ public class FpsCameraController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        InputManager.OnMouse += InputManagerOnOnMouse;
+        InputManager.OnKeyboardButtonPressed += InputManagerOnOnKeyboardButtonPressed;
     }
-
-    // Update is called once per frame
+    
     void Update()
-    {
-        m_mouse_position_ = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-        m_input_keyboard_ = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-
-        m_mouse_position_.y *= m_speed * Time.deltaTime;
-        m_mouse_position_.x *= m_speed * Time.deltaTime;
-        m_input_keyboard_.x *= m_speed * Time.deltaTime;
-        m_input_keyboard_.y *= m_speed * Time.deltaTime;
-    }
-
-    private void LateUpdate()
     {
         transform.rotation = Quaternion.AngleAxis(-m_mouse_position_.y, transform.right) * transform.rotation;
         transform.rotation = Quaternion.AngleAxis(m_mouse_position_.x, Vector3.up) * transform.rotation;
         transform.Translate(new Vector3(m_input_keyboard_.x, 0, m_input_keyboard_.y));
     }
+    
+    private void InputManagerOnOnMouse(float _fxValue, float _fyValue, float _fwheelvalue)
+    {
+        m_mouse_position_ = new Vector2(_fxValue * m_speed * Time.deltaTime, _fyValue * m_speed * Time.deltaTime);
+    }
+
+    private void InputManagerOnOnKeyboardButtonPressed(float _fhorizontalvalue, float _fverticalvalue)
+    {
+        m_input_keyboard_ = new Vector2(_fhorizontalvalue * m_speed * Time.deltaTime, _fverticalvalue * m_speed * Time.deltaTime);
+    }
+
 }

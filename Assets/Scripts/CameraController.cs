@@ -4,25 +4,29 @@ using UnityEngine;
 using System.Linq;
 public class CameraController : MonoBehaviour
 {
-
     [SerializeField] private List<Camera> m_cameras;
 
     private int m_current_index_camera_;
     // Use this for initialization
     void Start()
     {
+        InputManager.OnKeyboardRightArrowButtonPressed += InputManagerOnOnKeyboardRightArrowButtonPressed;
+        InputManager.OnKeyboardLeftArrowButtonPressed += InputManagerOnOnKeyboardLeftArrowButtonPressed;
         m_cameras.ForEach(c => c.enabled = false);
         m_cameras[0].enabled = true;
     }
 
+    
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-            PreviousCamera();
-
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-            NextCamera();
+        // todo : move in singleton
+        InputManager.TriggerMouseEventHandler(); 
+        InputManager.TriggerLeftMouseButtonEventHandler();
+        InputManager.TriggerRightMouseButtonEventHandler();
+        InputManager.TriggerKeyboardButtonPressed();
+        InputManager.TriggerKeyboardRightArrowButtonEventHandler();
+        InputManager.TriggerKeyboardLeftArrowButtonEventHandler();
     }
 
 
@@ -35,7 +39,6 @@ public class CameraController : MonoBehaviour
         }
         else
             m_current_index_camera_ = 0;
-
 
         m_cameras[m_current_index_camera_].enabled = true;
     }
@@ -54,5 +57,13 @@ public class CameraController : MonoBehaviour
         m_cameras[m_current_index_camera_].enabled = true;
     }
 
+    private void InputManagerOnOnKeyboardLeftArrowButtonPressed()
+    {
+        PreviousCamera();
+    }
 
+    private void InputManagerOnOnKeyboardRightArrowButtonPressed()
+    {
+        NextCamera();
+    }
 }

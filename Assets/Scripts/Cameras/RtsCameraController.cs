@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class RtsCameraController : MonoBehaviour
 {
-
     [SerializeField] private float m_speed;
     [SerializeField] private float m_max_zoom;
     [SerializeField] private float m_min_zoom;

@@ -12,8 +12,8 @@ public class FpsCameraController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        InputManager.OnMouse += InputManagerOnOnMouse;
-        InputManager.OnKeyboardButtonPressed += InputManagerOnOnKeyboardButtonPressed;
+        InputManager.m_instance.OnMouse += InputManagerOnOnMouse;
+        InputManager.m_instance.OnKeyboardButtonPressed += InputManagerOnOnKeyboardButtonPressed;
     }
     
     void Update()

@@ -10,18 +10,16 @@ public class CameraController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        InputManager.OnKeyboardRightArrowButtonPressed += InputManagerOnOnKeyboardRightArrowButtonPressed;
-        InputManager.OnKeyboardLeftArrowButtonPressed += InputManagerOnOnKeyboardLeftArrowButtonPressed;
+        InputManager.m_instance.OnKeyboardRightArrowButtonPressed += InputManagerOnOnKeyboardRightArrowButtonPressed;
+        InputManager.m_instance.OnKeyboardLeftArrowButtonPressed += InputManagerOnOnKeyboardLeftArrowButtonPressed;
         m_cameras.ForEach(c => c.enabled = false);
         m_cameras[0].enabled = true;
     }
 
-    
     // Update is called once per frame
     void Update()
     {
     }
-
 
     void NextCamera()
     {

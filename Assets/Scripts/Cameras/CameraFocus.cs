@@ -27,9 +27,9 @@ public class CameraFocus : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        InputManager.OnMouse += InputManagerOnOnMouse;
-        InputManager.OnClickLeftMouseButton += InputManagerOnOnClickLeftMouseButton;
-        InputManager.OnClickRightMouseButton += InputManagerOnOnClickRightMouseButton;
+        InputManager.m_instance.OnMouse += InputManagerOnOnMouse;
+        InputManager.m_instance.OnClickLeftMouseButton += InputManagerOnOnClickLeftMouseButton;
+        InputManager.m_instance.OnClickRightMouseButton += InputManagerOnOnClickRightMouseButton;
 
         m_current_planet_index_ = 0;
         m_originGameObject = m_planets[m_current_planet_index_];

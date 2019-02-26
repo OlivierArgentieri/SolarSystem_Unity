@@ -20,13 +20,6 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // todo : move in singleton
-        InputManager.TriggerMouseEventHandler(); 
-        InputManager.TriggerLeftMouseButtonEventHandler();
-        InputManager.TriggerRightMouseButtonEventHandler();
-        InputManager.TriggerKeyboardButtonPressed();
-        InputManager.TriggerKeyboardRightArrowButtonEventHandler();
-        InputManager.TriggerKeyboardLeftArrowButtonEventHandler();
     }
 
 

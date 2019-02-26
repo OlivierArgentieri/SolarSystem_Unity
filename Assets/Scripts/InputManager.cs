@@ -23,6 +23,15 @@ public class InputManager : MonoBehaviour
     public delegate void LeftArrowKeyboardButtonEventHandler();
     public static event LeftArrowKeyboardButtonEventHandler OnKeyboardLeftArrowButtonPressed;
 
+    private void Update()
+    {
+        InputManager.TriggerMouseEventHandler();
+        InputManager.TriggerLeftMouseButtonEventHandler();
+        InputManager.TriggerRightMouseButtonEventHandler();
+        InputManager.TriggerKeyboardButtonPressed();
+        InputManager.TriggerKeyboardRightArrowButtonEventHandler();
+        InputManager.TriggerKeyboardLeftArrowButtonEventHandler();
+    }
 
     public static void TriggerMouseEventHandler()
     {
